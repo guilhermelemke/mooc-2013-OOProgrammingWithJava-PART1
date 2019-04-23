@@ -31,5 +31,29 @@ public class MyDate {
 
         return false;
     }
-
+    
+    public void advance() {
+        if (day < 30) {
+            day++;
+        } else {
+            day = 1;
+            month++;
+            if (month > 12) {
+                month = 1;
+                year++;
+            }
+        }
+    }
+    
+    public void advance (int numberOfDays) {
+        for (int i = 0; i < numberOfDays; i++) {
+            advance();
+        }
+    }
+    
+    public MyDate afterNumberOfDays (int days) {
+        MyDate newMyDate = new MyDate(day, month, year);
+        newMyDate.advance(days);
+        return newMyDate;
+    }
 }
