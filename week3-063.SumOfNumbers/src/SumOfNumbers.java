@@ -3,7 +3,11 @@ import java.util.ArrayList;
 public class SumOfNumbers {
     public static int sum(ArrayList<Integer> list) {
         // Write your code here
-        return 0;
+        int somatorio = 0;
+        for (Integer numero : list) {
+            somatorio = somatorio + numero;
+        }
+        return somatorio;
     }
 
     public static void main(String[] args) {

@@ -2,10 +2,13 @@ import java.util.ArrayList;
 
 public class LengthsOfStrings {
     public static ArrayList<Integer> lengths(ArrayList<String> list) {
-        ArrayList<Integer> lengthList = new ArrayList<Integer>();
-        // write code here
-        
-        return lengthList;
+        ArrayList<Integer> listaContagem = new ArrayList<Integer>();
+        int tamanhoString = 0;
+        for (String lista : list) {
+            tamanhoString = lista.length();
+            listaContagem.add(tamanhoString);
+        }
+        return listaContagem;
     }
 
     public static void main(String[] args) {
