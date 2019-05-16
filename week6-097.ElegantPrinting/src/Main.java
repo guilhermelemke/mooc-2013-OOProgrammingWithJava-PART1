@@ -9,5 +9,13 @@ public class Main {
 
     public static void printElegantly(int[] array) {
         // Write code here
+        int i = 0;
+        while (i < array.length) {
+            System.out.print(array[i]);
+                if (i != (array.length) - 1) {
+                    System.out.print(", ");
+                }
+                i++;
+        }
     }
 }
